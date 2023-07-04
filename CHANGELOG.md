@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.1.0](https://github.com/ublue-os/nvidia/compare/v1.0.0...v1.1.0) (2023-07-04)
+
+
+### Features
+
+* Add 530xx series support and disable 525xx series support ([#81](https://github.com/ublue-os/nvidia/issues/81)) ([b15964d](https://github.com/ublue-os/nvidia/commit/b15964d63c519e4771eb9bbad5233ba965d45cbd))
+* add supergfxctl package ([#77](https://github.com/ublue-os/nvidia/issues/77)) ([20000b9](https://github.com/ublue-os/nvidia/commit/20000b9aeab0ee5ad436ad394983dfb20baecb37))
+* Add supergfxctl-plasmoid ([#118](https://github.com/ublue-os/nvidia/issues/118)) ([029369f](https://github.com/ublue-os/nvidia/commit/029369f836e170d7d8e15e52da1a4b03edce8a29))
+* Break up build process into separate jobs to improve caching in matrix strategy ([#63](https://github.com/ublue-os/nvidia/issues/63)) ([581f1fa](https://github.com/ublue-os/nvidia/commit/581f1fa78f3ff59d3405e2ab79e98960fa3d3c1e))
+* cut over nvidia akmod signing key ([#109](https://github.com/ublue-os/nvidia/issues/109)) ([7a5bdce](https://github.com/ublue-os/nvidia/commit/7a5bdce97ceca5205b671332d0cac3491c8ef4dd))
+* download RPM metadata in build stage to lower bandwidth usage in final stage ([#65](https://github.com/ublue-os/nvidia/issues/65)) ([95d9c13](https://github.com/ublue-os/nvidia/commit/95d9c132c2f8908d7b5e4fcf7362219286502bb4))
+* Enable Nvidia driver builds for v535 ([#122](https://github.com/ublue-os/nvidia/issues/122)) ([fc8c211](https://github.com/ublue-os/nvidia/commit/fc8c2119da8331a1a3c532482c37e091511e89ac))
+* switch the latest tag to F38 ([#97](https://github.com/ublue-os/nvidia/issues/97)) ([91aac1a](https://github.com/ublue-os/nvidia/commit/91aac1ad00cb78e86edb3f284a5d224f0146e0ef))
+
+
+### Bug Fixes
+
+* Added link from /usr/bin/rpm-ostree to /usr/bin/ dnf ([#117](https://github.com/ublue-os/nvidia/issues/117)) ([9a28f47](https://github.com/ublue-os/nvidia/commit/9a28f471e787b7adce4b32920b96cc84cdb9c40a))
+* disable 520xx series due to broken compatibility in latest kernels ([#74](https://github.com/ublue-os/nvidia/issues/74)) ([1f5306b](https://github.com/ublue-os/nvidia/commit/1f5306bf30651aac2486dcce0e8785112bdb2f38))
+* Don't disable rpmfusion after installation ([#112](https://github.com/ublue-os/nvidia/issues/112)) ([8405dc4](https://github.com/ublue-os/nvidia/commit/8405dc42be847b4a75434725066715553fa13ee3))
+* Ensure /tmp has right permissions set ([#67](https://github.com/ublue-os/nvidia/issues/67)) ([d743ca0](https://github.com/ublue-os/nvidia/commit/d743ca0a0afd3572e2af83c1d075398d17db9c33))
+* image name and description variable interpolation ([#62](https://github.com/ublue-os/nvidia/issues/62)) ([cf4e489](https://github.com/ublue-os/nvidia/commit/cf4e489c60871cc1bcf3fcd0f797bfbe22bd5731))
+* install supergfxctl-plasmoid ([#121](https://github.com/ublue-os/nvidia/issues/121)) ([1f6d6f2](https://github.com/ublue-os/nvidia/commit/1f6d6f2da87912a2e716bc1f9084228c627c617a))
+* maintain oci image version from upstream ([#76](https://github.com/ublue-os/nvidia/issues/76)) ([f0537de](https://github.com/ublue-os/nvidia/commit/f0537de2c808b6e12fdb3962e401bc34389aefa6))
+* readme formatting ([#103](https://github.com/ublue-os/nvidia/issues/103)) ([8748de0](https://github.com/ublue-os/nvidia/commit/8748de008df00c9af097729542f85930b35ba95f))
+* temporary remove supergfxctl-plasmoid ([#120](https://github.com/ublue-os/nvidia/issues/120)) ([5c716a8](https://github.com/ublue-os/nvidia/commit/5c716a8178dd5a07970bcdf94302fd7d033c6824))
+* update readme headers so we can deep link setup instructions ([#105](https://github.com/ublue-os/nvidia/issues/105)) ([fb5263b](https://github.com/ublue-os/nvidia/commit/fb5263b331827d8c51c8e6644a847b4a1c835f12))
+* use skopeo for more efficient upstream image introspection ([#79](https://github.com/ublue-os/nvidia/issues/79)) ([9bdcd6e](https://github.com/ublue-os/nvidia/commit/9bdcd6eff5b1cf0d5d8db3b69af6d7fabfce3e18))
+
 ## 1.0.0 (2023-03-07)
 
 
