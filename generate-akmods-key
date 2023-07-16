@@ -6,8 +6,8 @@ readonly LANG="${LANG:-en_US.UTF-8}"
 
 readonly CERT_DIR=certs
 
-readonly IMAGE="quay.io/fedora-ostree-desktops/silverblue"
-readonly TAG="37"
+readonly IMAGE="registry.fedoraproject.org/fedora"
+readonly TAG="38"
 
 mkdir -p "${PWD}/${CERT_DIR}"
 
@@ -15,12 +15,12 @@ mkdir -p "${PWD}/${CERT_DIR}"
 # installing additional packages on host
 podman run \
     --env="LANG=${LANG}" \
-    --volume="${PWD}/${CERT_DIR}:/tmp/${CERT_DIR}:z" \
+    --volume="${PWD}/${CERT_DIR}:/tmp/${CERT_DIR}" \
     --workdir="/tmp/${CERT_DIR}" \
     --entrypoint=/bin/sh \
     "${IMAGE}:${TAG}" -c \
-    "sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/fedora-{cisco-openh264,modular,updates-modular,updates-archive}.repo && \
-     rpm-ostree install akmods && \
-     kmodgenca --auto && \
+    "sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/fedora-{cisco-openh264,modular,updates-modular}.repo && \
+     dnf install akmods -y && \
+     kmodgenca -a && \
      cp /etc/pki/akmods/private/private_key.priv private_key.priv.prod && \
      cp /etc/pki/akmods/certs/public_key.der public_key.der.prod"

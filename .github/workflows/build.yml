@@ -19,8 +19,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        major_version: [37, 38]
-        driver_version: [470, 530, 535]
+        major_version: [38]
+        driver_version: [535]
         exclude:
           - driver_version: 470
             major_version: 38
@@ -174,13 +174,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: [silverblue, kinoite, vauxite, sericea, base, lxqt, mate]
-        major_version: [37, 38]
-        driver_version: [470, 530, 535]
+        image_name: [kinoite]
+        major_version: [38]
+        driver_version: [535]
         include:
-          - major_version: 37
-            is_latest_version: false
-            is_stable_version: true
           - major_version: 38
             is_latest_version: true
             is_stable_version: true
