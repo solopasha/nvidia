@@ -1,7 +1,7 @@
 name: build-ublue
 on:
   pull_request:
-  merge_group:
+  push:
   schedule:
     - cron: '0 8 * * *'  # 8:00am everyday (1 hr delay after 'main' builds)
   workflow_dispatch:
