@@ -1,5 +1,5 @@
 ARG IMAGE_NAME="${IMAGE_NAME:-silverblue}"
-ARG BASE_IMAGE="ghcr.io/ublue-os/${IMAGE_NAME}-main"
+ARG BASE_IMAGE="ghcr.io/solopasha/${IMAGE_NAME}-main"
 ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION:-38}"
 
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS builder
