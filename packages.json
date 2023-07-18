@@ -1,0 +1,86 @@
+{
+    "all": {
+        "include": {
+            "all": [
+                "alsa-firmware",
+                "apr",
+                "apr-util",
+                "distrobox",
+                "ffmpeg",
+                "ffmpeg-libs",
+                "ffmpegthumbnailer",
+                "fzf",
+                "grub2-tools-extra",
+                "heif-pixbuf-loader",
+                "htop",
+                "just",
+                "kernel-tools",
+                "libheif-freeworld",
+                "libheif-tools",
+                "libratbag-ratbagd",
+                "libva-utils",
+                "lshw",
+                "google-noto-sans-javanese-fonts",
+                "google-noto-sans-balinese-fonts",
+                "google-noto-sans-sundanese-fonts",
+                "nvme-cli",
+                "nvtop",
+                "openrgb-udev-rules",
+                "podman-plugins",
+                "steam-devices",
+                "openssl",
+                "smartmontools",
+                "symlinks",
+                "tcpdump",
+                "tmux",
+                "traceroute",
+                "vim",
+                "zstd",
+                "wireguard-tools"
+            ],
+            "silverblue": [
+                "adw-gtk3-theme",
+                "gnome-tweaks",
+                "raw-thumbnailer"
+            ],
+            "kinoite": [
+                "icoutils",
+                "kate",
+                "kcron",
+                "kio-admin",
+                "ksshaskpass"
+            ],
+            "sericea": [
+                "tumbler",
+                "clipman"
+            ]
+        },
+        "exclude": {
+            "all": [
+                "libavcodec-free",
+                "libavdevice-free",
+                "libavfilter-free",
+                "libavformat-free",
+                "libavutil-free",
+                "libpostproc-free",
+                "libswresample-free",
+                "libswscale-free"
+            ],
+            "kinoite": [
+                "ffmpegthumbnailer",
+                "kwrite"
+            ]
+        }
+    },
+    "38": {
+        "include": {
+            "all": [],
+            "kinoite": [
+                "xwaylandvideobridge"
+            ]
+        },
+        "exclude": {
+            "all": []
+        }
+    }
+}

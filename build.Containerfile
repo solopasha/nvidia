@@ -1,5 +1,5 @@
 ARG IMAGE_NAME="${IMAGE_NAME:-silverblue}"
-ARG BASE_IMAGE="ghcr.io/solopasha/${IMAGE_NAME}-main"
+ARG BASE_IMAGE="quay.io/fedora-ostree-desktops/${IMAGE_NAME}"
 ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION:-38}"
 
 FROM ${BASE_IMAGE}:${FEDORA_MAJOR_VERSION} AS builder
@@ -9,7 +9,7 @@ ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
 
 RUN ln -s /usr/bin/rpm-ostree /usr/bin/dnf
 
-COPY build.sh /tmp/build.sh
+COPY build-akmods.sh /tmp/build-akmods.sh
 
 ADD certs /tmp/certs
 
@@ -27,11 +27,11 @@ ADD https://raw.githubusercontent.com/NVIDIA/dgx-selinux/master/bin/RHEL9/nvidia
     /tmp/ublue-os-nvidia-addons/rpmbuild/SOURCES/nvidia-container.pp
 ADD files/etc/sway/environment /tmp/ublue-os-nvidia-addons/rpmbuild/SOURCES/environment
 
-RUN /tmp/build.sh
+RUN /tmp/build-akmods.sh
 
 RUN rpm -ql /tmp/ublue-os-nvidia-addons/rpmbuild/RPMS/*/*.rpm
 
 FROM scratch
 
-COPY --from=builder /var/cache /var/cache
+COPY --from=builder /var/cache/akmods /var/cache/akmods
 COPY --from=builder /tmp/ublue-os-nvidia-addons /tmp/ublue-os-nvidia-addons
