@@ -13,7 +13,7 @@ COPY build-akmods.sh /tmp/build-akmods.sh
 
 ADD certs /tmp/certs
 
-ADD ublue-os-nvidia-addons.spec /tmp/ublue-os-nvidia-addons/ublue-os-nvidia-addons.spec
+ADD rpmspec/ublue-os-nvidia-addons.spec /tmp/ublue-os-nvidia-addons/ublue-os-nvidia-addons.spec
 
 ADD https://nvidia.github.io/nvidia-docker/rhel9.0/nvidia-docker.repo \
     /tmp/ublue-os-nvidia-addons/rpmbuild/SOURCES/nvidia-container-runtime.repo
