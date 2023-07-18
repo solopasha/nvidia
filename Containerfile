@@ -21,9 +21,9 @@ ADD packages.json /tmp/packages.json
 
 COPY --from=ghcr.io/solopasha/config:latest /rpms /tmp/rpms
 
-RUN /tmp/install.sh
-RUN /tmp/build-main.sh
-RUN /tmp/post-install.sh
+RUN /tmp/install.sh && rpm-ostree cleanup -m
+RUN /tmp/build-main.sh && rpm-ostree cleanup -m
+RUN /tmp/post-install.sh && rpm-ostree cleanup -m
 RUN rm -rf /tmp/* /var/*
 RUN ostree container commit
 RUN mkdir -p /var/tmp && chmod -R 1777 /var/tmp
