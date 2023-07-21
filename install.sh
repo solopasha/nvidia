@@ -10,6 +10,8 @@ rpm-ostree install \
     /tmp/rpms/*.rpm #\
     # fedora-repos-archive
 
+sed -i '/^\[.*g]/,/\[/s/enabled=0/enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-updates-testing.repo
+
 install -D /tmp/ublue-os-nvidia-addons/rpmbuild/SOURCES/nvidia-container-runtime.repo \
     /etc/yum.repos.d/nvidia-container-runtime.repo
 

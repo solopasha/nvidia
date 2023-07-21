@@ -7,6 +7,7 @@ rpm-ostree install \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm
 
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/fedora-{cisco-openh264,modular,updates-modular}.repo
+sed -i '/^\[.*g]/,/\[/s/enabled=0/enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-updates-testing.repo
 
 # nvidia 520.xxx and newer currently don't have a -$VERSIONxx suffix in their
 # package names
