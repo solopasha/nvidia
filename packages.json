@@ -34,7 +34,7 @@
                 "traceroute",
                 "vim",
                 "zstd",
-                "wireguard-tools"
+                "zsh"
             ],
             "silverblue": [
                 "adw-gtk3-theme",
@@ -62,11 +62,27 @@
                 "libavutil-free",
                 "libpostproc-free",
                 "libswresample-free",
-                "libswscale-free"
+                "libswscale-free",
+                "firefox",
+                "firefox-langpacks"
             ],
             "kinoite": [
                 "ffmpegthumbnailer",
-                "kwrite"
+                "kwrite",
+                "plasma-discover",
+                "plasma-discover-flatpak",
+                "plasma-discover-rpm-ostree",
+                "plasma-discover-notifier",
+                "qt",
+                "sni-qt",
+                "qt-x11",
+                "qt-common",
+                "qt-at-spi",
+                "ibus-qt",
+                "dbusmenu-qt",
+                "kf5-akonadi-server",
+                "kf5-akonadi-server-mysql",
+                "open-sans-fonts"
             ]
         }
     },
